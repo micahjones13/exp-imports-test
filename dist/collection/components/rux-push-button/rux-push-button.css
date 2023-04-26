@@ -1,0 +1,109 @@
+:host {
+  display: block;
+  margin: --spacing-0 --spacing-050;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: var(--font-body-1-font-family);
+  font-size: var(--font-body-1-font-size);
+  font-weight: var(--font-body-1-font-weight);
+  letter-spacing: var(--font-body-1-letter-spacing);
+  line-height: var(--line-height-base);
+  text-align: left;
+}
+:host[disabled] {
+  opacity: var(--opacity-disabled);
+  cursor: not-allowed;
+}
+:host input {
+  appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+}
+:host input:focus-visible + .rux-push-button__button {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-offset);
+}
+:host .rux-push-button__button {
+  cursor: pointer;
+  font-family: var(--font-control-body-1-font-family);
+  font-size: var(--font-control-body-1-font-size);
+  font-weight: var(--font-control-body-1-font-weight);
+  line-height: var(--font-control-body-1-line-height);
+  letter-spacing: var(--font-control-body-1-letter-spacing);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-text-interactive-default);
+  border-radius: var(--radius-base);
+  box-shadow: var(--color-border-interactive-default) 0 0 0 1px inset;
+  padding: var(--spacing-2) var(--spacing-4);
+}
+:host .rux-push-button__button:hover {
+  cursor: pointer;
+  color: var(--color-background-interactive-hover);
+  box-shadow: var(--color-background-interactive-hover) 0 0 0 1px inset;
+}
+:host .rux-push-button__button:hover rux-icon {
+  color: var(--color-background-interactive-hover);
+}
+:host .rux-push-button__button--small {
+  padding: var(--spacing-1) var(--spacing-4);
+}
+:host .rux-push-button__button--small.rux-push-button__button--icon-only {
+  padding: var(--spacing-1);
+}
+:host .rux-push-button__button--large {
+  padding: var(--spacing-3) var(--spacing-4);
+}
+:host .rux-push-button__button--large.rux-push-button__button--icon-only {
+  padding: var(--spacing-3);
+}
+:host .rux-push-button__button rux-icon {
+  height: calc(var(--spacing-4) + var(--spacing-1));
+  width: calc(var(--spacing-4) + var(--spacing-1));
+  margin-right: var(--spacing-1);
+}
+:host .rux-push-button__button--icon-only {
+  font-size: 0 !important;
+  padding: var(--spacing-2);
+}
+:host .rux-push-button__button--icon-only rux-icon {
+  margin-right: var(--spacing-0);
+}
+:host .rux-push-button__input:checked + .rux-push-button__button {
+  display: inline-flex;
+  color: var(--color-text-black);
+  background-color: var(--color-palette-green-500);
+  box-shadow: var(--color-palette-green-500) 0 0 0 1px inset;
+}
+:host .rux-push-button__input:checked + .rux-push-button__button rux-icon {
+  color: var(--color-text-black);
+}
+:host .rux-push-button__input:checked + .rux-push-button__button:hover {
+  background-color: var(--color-palette-green-400);
+}
+:host .rux-push-button__input:checked:disabled + .rux-push-button__button:hover {
+  color: var(--color-text-black);
+  background-color: var(--color-palette-green-500);
+  box-shadow: var(--color-palette-green-500) 0 0 0 1px inset;
+}
+:host .rux-push-button__input:checked:disabled + .rux-push-button__button:hover rux-icon {
+  color: var(--color-text-black);
+}
+:host .rux-push-button__input:disabled + .rux-push-button__button {
+  opacity: var(--opacity-disabled);
+  cursor: not-allowed;
+}
+:host .rux-push-button__input:disabled + .rux-push-button__button:hover {
+  box-shadow: var(--color-border-interactive-default) 0 0 0 1px inset;
+  color: var(--color-text-interactive-default);
+}
+:host .rux-push-button__input:disabled + .rux-push-button__button:hover rux-icon {
+  color: var(--color-text-interactive-default);
+}
+
+:host([hidden]) {
+  display: none;
+}

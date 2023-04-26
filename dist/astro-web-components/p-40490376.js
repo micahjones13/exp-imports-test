@@ -1,0 +1,1 @@
+import{r,t as a}from"./p-507fde2f.js";function t(t,n){r(2,arguments);var e=a(t),f=a(n);return e.getTime()-f.getTime()}function n(a,n){r(2,arguments);var e=t(a,n)/36e5;return e>0?Math.floor(e):Math.ceil(e)}export{t as a,n as d}

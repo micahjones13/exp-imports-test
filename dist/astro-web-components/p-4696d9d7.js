@@ -1,0 +1,1 @@
+import{a as r}from"./p-40490376.js";import{r as a}from"./p-507fde2f.js";function t(t,o){a(2,arguments);var f=r(t,o)/6e4;return f>0?Math.floor(f):Math.ceil(f)}export{t as d}

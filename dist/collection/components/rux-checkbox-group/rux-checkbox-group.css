@@ -1,0 +1,80 @@
+.rux-help-text {
+  margin-top: var(--spacing-2);
+  color: var(--color-text-secondary);
+  font-size: var(--font-body-2-font-size);
+  font-family: var(--font-body-2-font-family);
+  font-weight: var(--font-body-2-font-weight);
+  letter-spacing: var(--font-body-2-letter-spacing);
+  line-height: var(--font-body-2-line-height);
+  text-align: left;
+}
+
+.rux-error-text {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  width: fit-content;
+  -webkit-order: 3;
+  order: 3;
+  display: flex;
+  margin-top: var(--spacing-2);
+  color: var(--color-text-error);
+  font-size: var(--font-body-2-bold-font-size);
+  font-family: var(--font-body-2-bold-font-family);
+  font-weight: var(--font-body-2-bold-font-weight);
+  letter-spacing: var(--font-body-2-bold-letter-spacing);
+  line-height: var(--font-body-2-bold-line-height);
+  text-align: left;
+}
+
+.rux-error-text svg {
+  width: calc(var(--spacing-4) + var(--spacing-1));
+  height: calc(var(--spacing-4) + var(--spacing-1));
+  color: var(--color-text-error);
+  margin-right: var(--spacing-2);
+  cursor: default;
+}
+
+:host {
+  display: block;
+}
+
+.hidden,
+:host([hidden]) {
+  display: none;
+}
+
+::slotted(rux-checkbox) {
+  display: block;
+  margin-bottom: var(--spacing-2);
+}
+
+::slotted(rux-checkbox:last-of-type) {
+  margin-bottom: 0;
+}
+
+.rux-label {
+  color: var(--color-text-primary);
+  font-family: var(--font-body-1-font-family);
+  font-size: var(--font-body-1-font-size);
+  font-weight: var(--font-body-1-font-weight);
+  letter-spacing: var(--font-body-1-letter-spacing);
+  line-height: var(--font-body-1-line-height);
+  margin-bottom: var(--spacing-2);
+  text-align: left;
+}
+.rux-label__asterisk {
+  margin-left: 4px;
+}
+
+.rux-checkbox-group {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: fit-content;
+  box-shadow: var(--color-border-interactive-muted) 0 0 0 1px inset;
+  border-radius: var(--radius-base);
+}
+.rux-checkbox-group--invalid {
+  box-shadow: var(--color-text-error) 0 0 0 1px inset;
+}

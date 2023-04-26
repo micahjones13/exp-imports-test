@@ -1,0 +1,183 @@
+:host {
+  display: contents;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+:host([hidden]) {
+  display: none;
+}
+
+rux-button-group {
+  margin-top: auto;
+  margin-left: auto;
+  align-self: flex-end;
+}
+
+.rux-dialog__wrapper {
+  position: fixed;
+  top: var(--spacing-0);
+  left: var(--spacing-0);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.5s;
+  -webkit-animation: fadeIn 0.5s;
+  -moz-animation: fadeIn 0.5s;
+  -o-animation: fadeIn 0.5s;
+  -ms-animation: fadeIn 0.5s;
+}
+.rux-dialog__dialog {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--color-background-surface-default);
+  width: 28rem;
+  border: var(--spacing-0);
+  margin: auto;
+  padding: var(--spacing-0);
+  user-select: none;
+  box-shadow: var(--shadow-outer-dialog);
+  max-height: 100%;
+}
+.rux-dialog__header {
+  box-sizing: border-box;
+  display: flex;
+  flex-grow: var(--spacing-0);
+  flex-shrink: var(--spacing-0);
+  align-items: center;
+  width: 100%;
+  padding: var(--spacing-4);
+  background-color: var(--color-background-surface-header);
+  color: var(--color-text-primary);
+  user-select: none;
+  font-family: var(--font-heading-2-font-family);
+  font-size: var(--font-heading-2-font-size);
+  line-height: var(--font-heading-2-line-height);
+  font-weight: var(--font-heading-2-font-weight);
+  letter-spacing: var(--font-heading-2-letter-spacing);
+}
+.rux-dialog__header ::slotted(h6),
+.rux-dialog__header ::slotted(h5),
+.rux-dialog__header ::slotted(h4),
+.rux-dialog__header ::slotted(h3),
+.rux-dialog__header ::slotted(h2),
+.rux-dialog__header ::slotted(h1) {
+  margin-block-start: var(--spacing-0);
+  margin-block-end: var(--spacing-0);
+}
+.rux-dialog__content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  color: var(--color-text-primary);
+  overflow: auto;
+  scrollbar-color: var(--color-border-interactive-muted, #2b659b) var(--color-background-surface-default, #1b2d3e);
+  /* visually "centers" because the dark edge of the shadow gives the illusion this is offset */
+}
+.rux-dialog__content::-webkit-scrollbar {
+  width: var(--spacing-4);
+  height: var(--spacing-4);
+  background-color: transparent;
+}
+.rux-dialog__content::-webkit-scrollbar-thumb {
+  background-color: var(--color-border-interactive-muted, #2b659b);
+  border-radius: 8px;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+.rux-dialog__content::-webkit-scrollbar-thumb:vertical {
+  border-left-width: var(--border-width-lg);
+}
+.rux-dialog__content::-webkit-scrollbar-thumb:horizontal {
+  border-top-width: var(--border-width-lg);
+}
+.rux-dialog__content::-webkit-scrollbar-thumb:active, .rux-dialog__content::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-background-interactive-default, #3a81bf);
+}
+.rux-dialog__content::-webkit-scrollbar-track, .rux-dialog__content::-webkit-scrollbar-corner {
+  background-color: var(--color-background-surface-default);
+  box-shadow: var(--scrollbar-shadow-inner-vertical);
+}
+.rux-dialog__content::-webkit-scrollbar-track:vertical {
+  box-shadow: var(--scrollbar-shadow-inner-vertical);
+}
+.rux-dialog__content::-webkit-scrollbar-track:horizontal {
+  box-shadow: var(--scrollbar-shadow-inner-vertical);
+}
+.rux-dialog__footer {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: var(--spacing-4);
+  color: var(--color-text-primary);
+}
+.rux-dialog__message {
+  padding: var(--spacing-4) var(--spacing-4) var(--spacing-1) var(--spacing-4);
+  font-size: var(--font-body-1-font-size);
+  line-height: var(--font-body-1-line-height);
+  text-align: left;
+}
+.rux-dialog .rux-button {
+  box-shadow: none !important;
+}
+.rux-dialog__header.hidden {
+  display: none;
+}
+.rux-dialog__message.hidden {
+  display: none;
+}
+
+rux-icon {
+  margin-right: var(--spacing-3);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
